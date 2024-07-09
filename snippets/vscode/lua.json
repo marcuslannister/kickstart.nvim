@@ -1,0 +1,14 @@
+{
+	"snip1": {
+		"prefix": "lua",
+		"body": [
+			"lualualua"
+		]
+	},
+	"snip_des": {
+		"prefix": "cdesc",
+		"body": [
+			"{ desc = \"\" }"
+		]
+	}
+}
