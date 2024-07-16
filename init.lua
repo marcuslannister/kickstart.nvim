@@ -927,3 +927,6 @@ require('lazy').setup({
 
 -- [[ Custom Keymaps ]]
 require 'keymaps'
+
+-- [[ Setting options ]]
+require 'options'
