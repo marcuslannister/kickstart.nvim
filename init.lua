@@ -285,7 +285,12 @@ require('lazy').setup({
     'folke/which-key.nvim',
     event = 'VeryLazy', -- Sets the loading event to 'VeryLazy'
     config = function() -- This is the function that runs, AFTER loading
-      require('which-key').setup()
+      require('which-key').setup {
+        -- Add this section to disable which-key in insert mode
+        triggers_blacklist = {
+          i = { '<leader>' }, -- disable which-key for leader key in insert mode
+        },
+      }
 
       -- Document existing key chains
       require('which-key').register {
