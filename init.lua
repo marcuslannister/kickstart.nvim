@@ -784,13 +784,14 @@ require('lazy').setup({
           --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
         },
         sources = {
-          { name = 'nvim_lsp' },
+          { name = 'nvim_lsp', max_item_count = 9 },
           { name = 'luasnip' },
           { name = 'path' },
           { name = 'buffer' }, -- Add buffer source
           {
             name = 'dictionary',
             keyword_length = 2,
+            max_item_count = 9,
           },
         },
       }
