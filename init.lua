@@ -715,6 +715,7 @@ require('lazy').setup({
       --  into multiple repos for maintenance purposes.
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
+      'uga-rosa/cmp-dictionary',
     },
     config = function()
       -- See `:help cmp`
@@ -728,7 +729,7 @@ require('lazy').setup({
             luasnip.lsp_expand(args.body)
           end,
         },
-        completion = { completeopt = 'menu,menuone,noinsert' },
+        completion = { completeopt = 'menu,menuone,noinsert', keyword_length = 2 },
 
         -- For an understanding of why these mappings were
         -- chosen, you will need to read `:help ins-completion`
@@ -787,7 +788,16 @@ require('lazy').setup({
           { name = 'luasnip' },
           { name = 'path' },
           { name = 'buffer' }, -- Add buffer source
+          {
+            name = 'dictionary',
+            keyword_length = 2,
+          },
         },
+      }
+
+      require('cmp_dictionary').setup {
+        paths = { '~/.config/nvim/dict/3of6all.txt' },
+        exact_length = 2,
       }
     end,
   },
