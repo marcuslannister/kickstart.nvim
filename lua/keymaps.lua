@@ -43,3 +43,7 @@ map('x', 'd', '"_d')
 -- leader-d for cut
 map('n', '<leader>d', '"+d')
 map('x', '<leader>d', '"+d')
+
+-- Add a new line below before pasting in normal mode
+map('n', '<A-p>', 'o<Esc>p')
+map('v', '<A-p>', '<Esc>o<Esc>p')
