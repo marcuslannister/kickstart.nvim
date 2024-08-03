@@ -32,3 +32,14 @@ map('n', '<leader>ek', ':e $HOME/.config/nvim/lua/keymaps.lua<CR>')
 
 -- Exit terminal mode
 map('t', '<ESC>', '<C-\\><C-n>')
+
+-- d and x for delete
+map('n', 'x', '"_x')
+map('n', 'X', '"_X')
+map('n', 'd', '"_d')
+map('n', 'D', '"_D')
+map('x', 'd', '"_d')
+
+-- leader-d for cut
+map('n', '<leader>d', '"+d')
+map('x', '<leader>d', '"+d')
