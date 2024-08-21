@@ -12,5 +12,12 @@
 			"line $2",
 			"snippet$0"
 		]
+	},
+	"timestamp": {
+		"prefix": "ts",
+		"body": [
+			"${CURRENT_YEAR}${CURRENT_MONTH}${CURRENT_DATE}T${CURRENT_HOUR}${CURRENT_MINUTE}"
+		],
+		"description": "Put time stamp in (YYMMDDTHM) format"
 	}
 }
