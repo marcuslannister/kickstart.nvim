@@ -47,3 +47,9 @@ map('x', '<leader>d', '"+d')
 -- Add a new line below before pasting in normal mode
 map('n', '<A-p>', 'o<Esc>p')
 map('v', '<A-p>', '<Esc>o<Esc>p')
+
+if vim.g.neovide then
+  vim.keymap.set({ 'n', 'v', 's', 'x', 'o', 'i', 'l', 'c', 't' }, '<D-v>', function()
+    vim.api.nvim_paste(vim.fn.getreg '+', true, -1)
+  end, { noremap = true, silent = true })
+end
