@@ -881,7 +881,6 @@ require('lazy').setup({
             context_start_underline = false,
           },
         },
-        conceallevel = 3,
       }
       vim.cmd [[colorscheme monokai-pro]]
     end,
