@@ -48,8 +48,14 @@ map('x', '<leader>d', '"+d')
 map('n', '<A-p>', 'o<Esc>p')
 map('v', '<A-p>', '<Esc>o<Esc>p')
 
+-- Select text and bold it in Markdown
+vim.keymap.set('v', '<leader>b', ':s/\\%V\\(.*\\)\\%V/**&**/g<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>vb', 'v$:s/\\%V\\(.*\\)\\%V/**&**/g<CR>', { noremap = true })
+
 if vim.g.neovide then
   vim.keymap.set({ 'n', 'v', 's', 'x', 'o', 'i', 'l', 'c', 't' }, '<D-v>', function()
     vim.api.nvim_paste(vim.fn.getreg '+', true, -1)
   end, { noremap = true, silent = true })
+
+  -- vim.api.nvim_set_keymap('r', '<D-v>', '<C-CR>', { noremap = true, silent = true })
 end
