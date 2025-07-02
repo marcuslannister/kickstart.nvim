@@ -9,3 +9,5 @@ if vim.g.neovide then
 end
 
 vim.opt.wrapscan = false -- Prevent search from wrapping
+
+vim.opt.guicursor = { 'n:block', 'i:hor30-blinkon1' }
