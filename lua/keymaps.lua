@@ -19,6 +19,7 @@ map('i', '<leader>bs', '<C-c>:w<CR>', { desc = 'Save buffer' })
 
 -- Close all windows and exit from Neovim with <leader> and qq
 map('n', '<leader>qa', ':qa!<CR>', { desc = 'Quit all buffers without save' })
+map('n', '<leader>qi', ':q!<CR>', { desc = 'Quit buffer without save' })
 map('n', '<leader>qq', ':q<CR>', { desc = 'Quit all buffers' })
 
 -- Manage window
