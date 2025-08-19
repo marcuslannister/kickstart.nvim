@@ -921,10 +921,10 @@ require('lazy').setup({
   -- },
 
   {
-    'nuvic/flexoki-neovim',
+    'nuvic/flexoki-nvim',
     config = function()
       -- Set colorscheme aftr options
-      vim.cmd [[colorscheme flexoki]]
+      vim.cmd [[colorscheme flexoki-dawn]]
     end,
   },
 
